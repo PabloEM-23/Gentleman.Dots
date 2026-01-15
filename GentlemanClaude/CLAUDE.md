@@ -63,24 +63,25 @@ IMPORTANT: When you detect any of these contexts, IMMEDIATELY read the correspon
 | Playwright tests, e2e | `~/.claude/skills/playwright/SKILL.md` |
 | Pytest, Python testing | `~/.claude/skills/pytest/SKILL.md` |
 
-### Prowler-specific (when in prowler repos)
+### Work/Jira Integration
 | Context | Read this file |
 |---------|----------------|
-| Prowler general/core | `~/.claude/skills/prowler/SKILL.md` |
-| Prowler API endpoints | `~/.claude/skills/prowler-api/SKILL.md` |
-| Prowler UI components | `~/.claude/skills/prowler-ui/SKILL.md` |
-| Prowler compliance/checks | `~/.claude/skills/prowler-compliance/SKILL.md` |
-| Prowler SDK checks | `~/.claude/skills/prowler-sdk-check/SKILL.md` |
-| Prowler providers | `~/.claude/skills/prowler-provider/SKILL.md` |
-| Prowler MCP integration | `~/.claude/skills/prowler-mcp/SKILL.md` |
-| Prowler documentation | `~/.claude/skills/prowler-docs/SKILL.md` |
-| Prowler PR reviews | `~/.claude/skills/prowler-pr/SKILL.md` |
-| Prowler API tests | `~/.claude/skills/prowler-test-api/SKILL.md` |
-| Prowler SDK tests | `~/.claude/skills/prowler-test-sdk/SKILL.md` |
-| Prowler UI tests | `~/.claude/skills/prowler-test-ui/SKILL.md` |
+| PL/SQL, Oracle, packages, procedures, DBA | `~/.claude/skills/jira-plsql/SKILL.md` |
+| Jira epics, large features, initiatives | `~/.claude/skills/jira-epic/SKILL.md` |
+| Jira tasks, tickets, issues | `~/.claude/skills/jira-task/SKILL.md` |
+
+### Project-Specific Skills
+Some projects have their own skills in `skills/` folder. Check for:
+- `AGENTS.md` - AI agent guidelines with Auto-invoke table
+- `skills/*/SKILL.md` - Project-specific patterns
+
+| Project | Skills Location |
+|---------|-----------------|
+| blacknails-web | `skills/blacknails-{db,reservas,emails}/SKILL.md` |
 
 ### How to use skills
 1. Detect context from user request or current file being edited
-2. Read the relevant SKILL.md file(s) BEFORE writing code
-3. Apply ALL patterns and rules from the skill
-4. Multiple skills can apply (e.g., react-19 + typescript + tailwind-4)
+2. Check if project has `skills/` folder with relevant skills
+3. Read the relevant SKILL.md file(s) BEFORE writing code
+4. Apply ALL patterns and rules from the skill
+5. Multiple skills can apply (e.g., react-19 + typescript + tailwind-4 + project-specific)
