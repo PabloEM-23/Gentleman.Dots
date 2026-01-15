@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "Building REST APIs with Django"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## ViewSet Pattern
@@ -182,5 +185,3 @@ python manage.py createsuperuser
 python manage.py shell
 ```
 
-## Keywords
-django, drf, rest framework, viewset, serializer, api, rest api

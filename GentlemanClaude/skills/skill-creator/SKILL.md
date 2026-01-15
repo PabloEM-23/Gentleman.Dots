@@ -6,7 +6,9 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "Creating new skills"
 allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
@@ -51,6 +53,9 @@ license: Apache-2.0
 metadata:
   author: gentleman-programming
   version: "1.0"
+  scope: [root]                           # Where skill applies: root, ui, api
+  auto_invoke: "{Action that triggers}"   # Used by skill-sync
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## When to Use
@@ -120,9 +125,12 @@ Generic skill needs Prowler info?  → Add references/ pointing to Prowler docs
 |-------|----------|-------------|
 | `name` | Yes | Skill identifier (lowercase, hyphens) |
 | `description` | Yes | What + Trigger in one block |
-| `license` | Yes | Always `Apache-2.0` for Prowler |
+| `license` | Yes | Always `Apache-2.0` |
 | `metadata.author` | Yes | `gentleman-programming` |
 | `metadata.version` | Yes | Semantic version as string |
+| `metadata.scope` | Yes | Where skill applies: `[root]`, `[ui]`, `[api]` |
+| `metadata.auto_invoke` | Yes | Action that triggers skill (for Auto-invoke table) |
+| `allowed-tools` | No | Tools the skill can use |
 
 ---
 

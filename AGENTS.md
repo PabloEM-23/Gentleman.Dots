@@ -40,21 +40,49 @@ These skills are copied to user's Claude/OpenCode config via the installer.
 | `django-drf` | Django REST Framework | [GentlemanClaude/skills/django-drf](GentlemanClaude/skills/django-drf/SKILL.md) |
 | `playwright` | Playwright E2E testing | [GentlemanClaude/skills/playwright](GentlemanClaude/skills/playwright/SKILL.md) |
 | `pytest` | Python pytest patterns | [GentlemanClaude/skills/pytest](GentlemanClaude/skills/pytest/SKILL.md) |
+| `jira-task` | Create Jira tasks/tickets | [GentlemanClaude/skills/jira-task](GentlemanClaude/skills/jira-task/SKILL.md) |
+| `jira-epic` | Create Jira epics for large features | [GentlemanClaude/skills/jira-epic](GentlemanClaude/skills/jira-epic/SKILL.md) |
 | `skill-creator` | Create new AI agent skills | [GentlemanClaude/skills/skill-creator](GentlemanClaude/skills/skill-creator/SKILL.md) |
+
+### Maintenance Skills
+
+| Skill | Description | File |
+|-------|-------------|------|
+| `skill-sync` | Regenerate Auto-invoke tables from SKILL.md | [SKILL.md](skills/skill-sync/SKILL.md) |
 
 ## Auto-invoke Skills
 
 When performing these actions, **ALWAYS** invoke the corresponding skill FIRST:
 
-| Action | Invoke First | Why |
-|--------|--------------|-----|
-| Adding new TUI screen | `gentleman-bubbletea` | Screen constants, Model state, Update handlers |
-| Creating Vim exercises | `gentleman-trainer` | Exercise structure, module registration, validation |
-| Adding installation step | `gentleman-installer` | Step registration, OS handling, error wrapping |
-| Writing E2E tests | `gentleman-e2e` | Test structure, Docker patterns, verification |
-| Adding OS support | `gentleman-system` | Detection priority, command execution patterns |
-| Writing Go tests | `go-testing` | Table-driven tests, teatest patterns |
-| Creating new skill | `skill-creator` | Skill structure, naming, frontmatter |
+### Repository-Specific (Gentleman.Dots)
+
+| Action | Skill |
+|--------|-------|
+| Adding new TUI screen | `gentleman-bubbletea` |
+| Creating Vim exercises | `gentleman-trainer` |
+| Adding installation step | `gentleman-installer` |
+| Writing E2E tests | `gentleman-e2e` |
+| Adding OS support | `gentleman-system` |
+| Writing Go tests | `go-testing` |
+
+### Generic Skills (Any Project)
+
+| Action | Skill |
+|--------|-------|
+| Writing React components | `react-19` |
+| App Router / Server Actions | `nextjs-15` |
+| Writing TypeScript types/interfaces | `typescript` |
+| Working with Tailwind classes | `tailwind-4` |
+| Creating Zod schemas | `zod-4` |
+| Using Zustand stores | `zustand-5` |
+| Building AI chat features | `ai-sdk-5` |
+| Building REST APIs with Django | `django-drf` |
+| Writing Playwright E2E tests | `playwright` |
+| Writing Python tests with pytest | `pytest` |
+| Creating Jira tasks/tickets | `jira-task` |
+| Creating Jira epics | `jira-epic` |
+| Creating new skills | `skill-creator` |
+| Regenerate Auto-invoke tables | `skill-sync` |
 
 ## How Skills Work
 
