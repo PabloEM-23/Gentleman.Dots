@@ -1,0 +1,123 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git log:*)",
+      "Bash(git stash:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git clone:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(pnpm:*)",
+      "Bash(bun:*)",
+      "Bash(yarn:*)",
+      "Bash(node:*)",
+      "Bash(eza:*)",
+      "Bash(fd:*)",
+      "Bash(bat:*)",
+      "Bash(rg:*)",
+      "Bash(sd:*)",
+      "Bash(which:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(uvx:*)",
+      "Bash(uv:*)",
+      "Bash(cargo:*)",
+      "Bash(go:*)",
+      "Bash(make:*)",
+      "Bash(docker:*)",
+      "Bash(gh:*)",
+      "Bash(code:*)",
+      "Bash(nvim:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(touch:*)",
+      "Bash(pytest:*)",
+      "Bash(jest:*)",
+      "Bash(vitest:*)",
+      "Bash(ng:*)",
+      "Bash(nx:*)",
+      "Bash(turbo:*)",
+      "Bash(claude:*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(.env.local)",
+      "Read(.env.production)",
+      "Read(.env.development)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/credentials.json)"
+    ],
+    "ask": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git push --force:*)",
+      "Bash(git rebase:*)",
+      "Bash(git reset --hard:*)"
+    ]
+  },
+  "outputStyle": "default",
+  "language": "Español",
+  "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "latest",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/log-file-path.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/backup-before-edit.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/format-with-prettier.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/run-tests-on-stop.sh",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

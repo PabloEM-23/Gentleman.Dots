@@ -1,18 +1,31 @@
 {
   "mcpServers": {
-    "context7": {
-      "type": "http",
-      "url": "https://mcp.context7.com/mcp"
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
     },
-    "mcp-atlassian": {
+    "atlassian": {
       "type": "stdio",
       "command": "uvx",
-      "args": ["--python=3.12", "mcp-atlassian"],
+      "args": ["mcp-atlassian"],
       "env": {
         "JIRA_URL": "https://YOUR-COMPANY.atlassian.net",
         "JIRA_USERNAME": "YOUR_EMAIL@company.com",
         "JIRA_API_TOKEN": "YOUR_API_TOKEN_HERE"
       }
+    },
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-chrome-devtools@latest"]
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
     },
     "figma": {
       "type": "stdio",
@@ -20,6 +33,14 @@
       "args": ["-y", "@anthropic/mcp-figma"],
       "env": {
         "FIGMA_ACCESS_TOKEN": "YOUR_FIGMA_TOKEN_HERE"
+      }
+    },
+    "supabase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-supabase"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "YOUR_SUPABASE_TOKEN_HERE"
       }
     }
   }
