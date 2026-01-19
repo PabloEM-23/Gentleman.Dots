@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "Creating Zod schemas"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## Breaking Changes from Zod 3
@@ -212,5 +215,3 @@ function Form() {
 }
 ```
 
-## Keywords
-zod, validation, schema, typescript, forms, parsing

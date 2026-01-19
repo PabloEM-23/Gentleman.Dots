@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.1"
+  version: "1.2"
+  scope: [root]
+  auto_invoke: "Writing Playwright E2E tests"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## MCP Workflow (MANDATORY If Available)
@@ -317,5 +320,3 @@ npx playwright test --debug            # Debug mode
 npx playwright test tests/login/       # Run specific folder
 ```
 
-## Keywords
-playwright, e2e, testing, page object model, selectors, end-to-end, mcp

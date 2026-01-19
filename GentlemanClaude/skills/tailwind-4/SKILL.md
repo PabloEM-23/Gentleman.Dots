@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.1"
+  version: "1.2"
+  scope: [root]
+  auto_invoke: "Working with Tailwind classes"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## Styling Decision Tree
@@ -195,5 +198,3 @@ const CHART_COLORS = {
 <div className="bg-[#1e293b]" />  // NO
 ```
 
-## Keywords
-tailwind, css, styling, cn, utility classes, responsive

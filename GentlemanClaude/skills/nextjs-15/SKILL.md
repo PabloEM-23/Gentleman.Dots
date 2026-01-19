@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "App Router / Server Actions"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## App Router File Conventions
@@ -146,5 +149,3 @@ export async function getSecretData() {
 }
 ```
 
-## Keywords
-nextjs, next.js, app router, server components, server actions, streaming

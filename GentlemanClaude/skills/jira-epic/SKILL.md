@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "Creating Jira epics"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## When to Use
@@ -308,5 +311,3 @@ mcp__mcp-atlassian__jira_update_issue (assignee)
 mcp__mcp-atlassian__jira_transition_issue (status)
 ```
 
-## Keywords
-jira, epic, feature, initiative, prowler, large feature

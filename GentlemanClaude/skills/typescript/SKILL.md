@@ -6,7 +6,10 @@ description: >
 license: Apache-2.0
 metadata:
   author: gentleman-programming
-  version: "1.0"
+  version: "1.1"
+  scope: [root]
+  auto_invoke: "Writing TypeScript types/interfaces"
+allowed-tools: Read, Edit, Write, Glob, Grep, Bash, WebFetch, WebSearch, Task
 ---
 
 ## Const Types Pattern (REQUIRED)
@@ -106,5 +109,3 @@ import type { User } from "./types";
 import { createUser, type Config } from "./utils";
 ```
 
-## Keywords
-typescript, ts, types, interfaces, generics, strict mode, utility types
