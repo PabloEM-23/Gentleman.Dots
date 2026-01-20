@@ -127,4 +127,7 @@ Write-Host ""
 Write-Host "To enable test-on-stop hook for a project, create:" -ForegroundColor White
 Write-Host "  New-Item -Path 'C:\path\to\project\.claude-run-tests' -ItemType File" -ForegroundColor Gray
 Write-Host ""
+Write-Host "Optional: Install Codex integration" -ForegroundColor White
+Write-Host "  cd ..\GentlemanCodex && .\install.ps1" -ForegroundColor Gray
+Write-Host ""
 Write-Host "Restart Claude Code to apply changes." -ForegroundColor Yellow

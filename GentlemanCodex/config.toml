@@ -1,0 +1,65 @@
+# Codex CLI Configuration
+# https://developers.openai.com/codex/config-reference/
+
+# Model settings
+model = "gpt-5.2-codex"
+model_reasoning_effort = "high"
+
+# Approval policy: "untrusted" | "on-failure" | "on-request" | "never"
+# untrusted = ask before every action
+# on-failure = auto-approve, re-ask on failure
+# on-request = auto-approve unless tool requests
+# never = auto-approve everything (careful!)
+approval_policy = "on-failure"
+
+# Sandbox mode: "read-only" | "workspace-write" | "danger-full-access"
+# FULL ACCESS: permite internet, escritura en cualquier lugar, etc.
+sandbox_mode = "danger-full-access"
+
+# Project documentation settings
+project_doc_max_bytes = 65536  # 64KB max for AGENTS.md files
+
+# Fallback filenames when AGENTS.md is missing
+project_doc_fallback_filenames = ["CLAUDE.md", "CONTRIBUTING.md", "DEVELOPMENT.md"]
+
+# Project root markers (to detect project root)
+project_root_markers = [".git", "package.json", "Cargo.toml", "go.mod", "pyproject.toml"]
+
+# TUI settings
+[tui]
+theme = "dark"
+
+# Features
+[features]
+shell_tool = true
+unified_exec = true
+experimental_windows_sandbox = true
+elevated_windows_sandbox = true
+web_search = true  # Habilita busqueda web
+
+# Model migrations (for compatibility)
+[notice.model_migrations]
+"gpt-5.2" = "gpt-5.2-codex"
+
+# MCP Servers (desactivados temporalmente - descomentar cuando estén configurados)
+# [mcp_servers.github]
+# type = "stdio"
+# command = "npx"
+# args = ["-y", "@modelcontextprotocol/server-github"]
+#
+# [mcp_servers.github.env]
+# GITHUB_TOKEN = "${GITHUB_TOKEN}"
+#
+# [mcp_servers.memory]
+# type = "stdio"
+# command = "npx"
+# args = ["-y", "@anthropic/mcp-server-memory"]
+
+# Profiles for different contexts
+[profiles.frontend]
+model = "gpt-5.2-codex"
+model_reasoning_effort = "high"
+
+[profiles.quick]
+model = "gpt-5.2-codex"
+model_reasoning_effort = "medium"

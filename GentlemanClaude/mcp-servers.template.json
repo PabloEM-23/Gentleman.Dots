@@ -42,6 +42,17 @@
       "env": {
         "SUPABASE_ACCESS_TOKEN": "YOUR_SUPABASE_TOKEN_HERE"
       }
+    },
+    "codex": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "CODEX_PATH/codex.js",
+        "mcp-server",
+        "-c",
+        "features.web_search=true"
+      ],
+      "note": "CODEX_PATH se configura automaticamente con install.ps1 o install.sh de GentlemanCodex"
     }
   }
 }
